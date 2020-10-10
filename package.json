@@ -4,7 +4,8 @@
   "description": "health web",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "set NODE_ENV=development&& node app.js",
+    "start-prod": "set NODE_ENV=production&& node app.js"
   },
   "author": "idir",
   "license": "ISC",
@@ -30,5 +31,8 @@
   },
   "devDependencies": {
     "handlebars": "^4.5.0"
+  },
+  "engines": {
+    "node": "^12.13.0"
   }
 }
