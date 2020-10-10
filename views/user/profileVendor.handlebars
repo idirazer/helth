@@ -1,0 +1,166 @@
+
+<!--<div class="site-wrap">
+
+
+    <div class="site-navbar py-2">
+
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+          </form>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="/" class="js-logo-clone">Health care</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="shop">Shop</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li class="has-children">
+                  <a href="#"><i class="fas fa-user"></i> User</a>
+                  <ul class="dropdown">
+                    {{#if chekuse}}
+          {{#if checkProfile}}
+            <a href="/users/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+             {{else}}
+            <a href="/users/profile"><i class="fas fa-address-card"></i> Profile</a>
+             <a href="/users/profileVendor"><i class="fas fa-address-card"></i> Profile profileVendor</a>
+              <a href="/users/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+             
+          {{/if}}
+            
+          {{else}}
+            <a href="/users/signup"> <i class="fas fa-user-plus"></i> Signup</a>
+            <a href="/users/signin"><i class="fas fa-sign-in-alt"></i> Signin</a>
+            <a href="/users/publishMedicines"><i class="fas fa-upload"></i>Publish-Medicines</a>
+            <a href="/users/signinofpublish"><i class="fas fa-sign-in-alt"></i> Signin of Publish</a>
+            
+          {{/if}}
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+           <div class="icons">
+            <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
+           
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
+                class="icon-menu"></span></a>
+          </div>
+          <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+-->
+ <!-- <input type="file" name="imgePath" placeholder="enter your  medicament image" class="form-control">
+        <input type="text" name="productName" placeholder="enter your medicament name" class="form-control">
+        <input type="text" name="utilisation" placeholder=" enter your  medicament utilisation" class="form-control">
+        <input type="text" name=" quantum" placeholder=" enter your  medicament Quantum" class="form-control">
+        <input type="text" name="quantite" placeholder=" enter your  medicament quantite" class="form-control">
+        <input type="text" name="Advice" placeholder="enter your  Advice" class="form-control">
+        <input type="number" name="price" placeholder="enter your  medicament price" class="form-control">
+       
+          
+        <button>PublishMedicines</button>
+     -->
+
+        <form method="POST" action="updateuserV" style="margin-top: 30px;">
+           {{#each masseges}}
+            <div class="aler alert-danger">
+              <p>{{this}}</p>
+            </div>
+          {{/each}}
+          <!--
+            <div class="form-group">
+              <label for="UserName">User Name</label>
+              <input type="text" class="form-control"
+                placeholder=" please enter your User Name" name="username">
+            </div>
+              <div class="form-group">
+             <label for="familyname">Family Name</label>
+              <input type="text" class="form-control"
+                placeholder=" please enter your Family Name" name="familyname">
+            </div>
+            
+              <div class="form-group">
+              <label for="Adress">Adress</label>
+              <input type="text" class="form-control"
+                placeholder=" please enter your Adress" name="adress">
+            </div>
+              <div class="form-group">
+              <label for="telphon">Telephone Number</label>
+              <input type="number" class="form-control"
+                placeholder=" please enter your Telephone Number" name="telphon">
+            </div>
+              <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" class="form-control"
+                placeholder=" please enter your  Email" name="email">
+            </div>
+               <div class="form-group">
+              <label for="password">Password</label>
+              <input type="text" class="form-control"
+                placeholder=" please enter your  Password" name="password">
+            </div>
+
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password</label>
+              <input type="text" class="form-control"
+                placeholder=" please enter your  Confirm Password" name="confirm-password">
+            </div>
+            -->
+              <input type="file" name="imgePath" placeholder="enter your  medicament image" class="form-control">
+        <input type="text" name="productName" placeholder="enter your medicine name" class="form-control">
+        <input type="text" name="utilisation" placeholder=" enter your  medicine form" class="form-control">
+        <input type="text" name=" quantum" placeholder=" enter your  medicine dosage " class="form-control">
+        <input type="text" name="quantite" placeholder=" enter your  medicine quantity" class="form-control">
+        <input type="text" name="Advice" placeholder="enter your  Advice" class="form-control">
+        <input type="number" name="price" placeholder="enter your  medicine price" class="form-control">
+       
+
+            <div class="text-center">
+              <a href="/users/profileVendor" class="btn btn-info">Publish</a>
+              <a href="/users/profileVendor" class="btn btn-danger">Cancel</a>
+            </div>
+          </form>
+
+
+<!--
+<div class="col-md-4 offset-md-4" style="padding-top: 30px;">
+{{#each masseges}}
+<div class="alert alert-danger">
+    <p>{{this}}</p>
+</div>
+    
+{{/each}}
+    
+
+<div class="form">
+    <h1 >Medication Registration Form</h1>
+    <form action="MedicationRegistrationForm" method="POST">
+        <input type="file" name="imgePath" placeholder="enter your  medicament image" class="form-control">
+        <input type="text" name="productName" placeholder="enter your medicament name" class="form-control">
+        <input type="text" name="utilisation" placeholder=" enter your  medicament utilisation" class="form-control">
+        <input type="text" name=" quantum" placeholder=" enter your  medicament quantum" class="form-control">
+        <input type="text" name="quantite" placeholder=" enter your  medicament quantite" class="form-control">
+        <input type="text" name="Advice" placeholder="enter your  Advice" class="form-control">
+        <input type="number" name="price" placeholder="enter your  medicament price" class="form-control">
+       
+          
+        <button>PublishMedicines</button>
+     
+    </form>
+    </div>

@@ -1,0 +1,51 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: greenyellow;
+}
+
+
+
+.boock {
+  width: 280px;
+  height: 100px;
+  font-size: 24px;
+  line-height: normal;
+  clear: both;
+  float: none;
+
+
+  background-color: #ff4d00;
+
+  color: #fff !important;
+  margin: 0 -17px 20px;
+  padding: 12px 17px;
+  ;
+}
+
+.boock:focus {
+  /*  to hide the blue border line when someone click on a button */
+  outline: 0;
+}
+
+.boock:hover {
+  background-color: #d65703;
+  border-color: #eb833f;
+  color: #fff;
+}
+
+.stick {
+  position: fixed;
+  margin-top: 10px;
+
+}

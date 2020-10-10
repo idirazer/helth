@@ -1,0 +1,229 @@
+<!-- PRE LOADER -->
+<section class="preloader">
+  <div class="spinner">
+    <span class="spinner-rotate"></span>
+  </div>
+</section>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-3">
+        <p>Welcome to a Professional Health Care</p>
+      </div>
+
+      <div class="col-md-8 col-sm-9 text-align-right">
+        <span class="phone-icon"><i class="fa fa-phone"></i> 010-060-0160</span>
+        <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 6:00 AM - 10:00 PM
+          (Mon-Fri)</span>
+        <span class="email-icon"><i class="fa fa-envelope-o"></i>
+          <a href="#">info@company.com</a></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MENU -->
+<section class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+      </button>
+
+      <!-- lOGO TEXT HERE -->
+      <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>ealth Center</a>
+    </div>
+
+    <!-- MENU LINKS -->
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html#top" class="smoothScroll">Home</a></li>
+        <li>
+          <a href="index.html#about" class="smoothScroll">About Us</a>
+        </li>
+        <li>
+          <a href="index.html#team" class="smoothScroll">Our Staff</a>
+        </li>
+        <li><a href="index.html#news" class="smoothScroll">News</a></li>
+        <li>
+          <a href="index.html#google-map" class="smoothScroll">Contact</a>
+        </li>
+        <li class="appointment-btn">
+          <a href="index.html#appointment">Make an appointment</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS DETAIL -->
+<section id="news-detail" data-stellar-background-ratio="0.5">
+  <div class="" style="margin-left: 10px; margin-right: 10px;">
+    <div class="row">
+      <div class="col-md-6 col-sm-7">
+        <!-- NEWS THUMB -->
+        <div class="news-detail-thumb">
+          <div class="news-image">
+            <img src="/picturs/images/news-image3.jpg" class="img-responsive" alt="" />
+          </div>
+          <h3 style="margin-left: 20px;">{{#each doctor}} {{this.name}}-{{this.username}}{{/each}}</h3>
+          <h3>Information and Experience (bio)</h3>
+          <p>
+            Aenean molestie porttitor lorem sed semper. Aliquam semper
+            iaculis libero, eu finibus ex euismod at. In molestie justo ut
+            egestas porttitor. Phasellus interdum erat eu lectus condimentum
+            euismod. Sed pellentesque fringilla diam vitae congue. Ut rutrum
+            diam nisi, in maximus felis vulputate vitae.
+          </p>
+          <div class="news-author" style="margin-top: 10px;">
+            <h4>Opening Hours</h4>
+            <table style="margin-top: 5px;">
+              <tr>
+                <td>Monday:</td>
+                <td>08h30 à 12h00</td>
+                <td>08h30 à 12h00</td>
+              </tr>
+              <tr>
+                <td>Tuesday:</td>
+                <td>08h30 à 12h00</td>
+                <td>08h30 à 12h00</td>
+              </tr>
+              <tr>
+                <td>Wednesday:</td>
+                <td>08h30 à 12h00</td>
+                <td>08h30 à 12h00</td>
+              </tr>
+              <tr>
+                <td>Thursday:</td>
+                <td>08h30 à 12h00</td>
+                <td>08h30 à 12h00</td>
+              </tr>
+              <tr>
+                <td>Friday:</td>
+                <td>08h30 à 12h00</td>
+                <td>08h30 à 12h00</td>
+              </tr>
+              <tr>
+                <td>Saturday:</td>
+                <td>08h30 à 12h00</td>
+                <td>08h30 à 12h00</td>
+              </tr>
+              <tr>
+                <td>Sunday:</td>
+                <td>08h30 à 12h00</td>
+                <td>08h30 à 12h00</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-5">
+        <div class="news-sidebar">
+          <div class="news-author" style="border: solid 1px; margin-bottom: 5px;">
+            <h4>Suggestions doctors</h4>
+          </div>
+
+          <div class="recent-post" style="height: 350px; overflow: scroll; border: solid 1px;">
+            {{#each doctors}}
+            <div class="media">
+              <div class="media-object pull-left">
+                <a href="/each_doctor/{{this._id}}"><img src="/picturs/images/news-image.jpg" class="img-responsive"
+                    alt="" /></a>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading">
+                  <a href="/each_doctor/{{this._id}}">Dr .{{this.username}}-{{this.name}}</a>
+                </h4>
+              </div>
+            </div>{{/each}}
+          </div>
+
+        </div>
+        <div class="news-author" style="
+                height: 150px;
+                overflow: scroll;
+                border: solid 1px;
+                margin-top: 7px;
+              ">
+          <h4 style="margin-top: 0px;">Languages spoken</h4>
+          <h5>- English</h5>
+          <h5>- French</h5>
+        </div>
+        <div class="contact-info news-author" style="
+                height: 250px;
+                overflow: scroll;
+                border: solid 1px;
+                margin-top: 7px;
+              ">
+          <h4 style="margin-top: 0px;">Contact details</h4>
+          <p><i class="fa fa-phone"></i> 010-070-0170</p>
+          {{!-- <p><i class="fa fa-flickr"></i> Bordj bouararidj-el achir</p> --}}
+
+          <p><i class="fa fa-facebook"></i> 010-070-0170</p>
+          {{#each doctor}}<p><i class="fa fa-map-marker"></i> {{this.address}}</p>{{/each}}
+
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-7">
+        <div id="stickert">
+
+          <button class=" boock btn " data-toggle="modal" data-target="#mymodal"> <i class="fa fa-bolt"
+              style="margin-right: 9px;"></i> <a style="color: white;" href="">Boock
+              Apoiement</a> </button>
+        </div>
+        <!-- //////////////////making boock Apoiement /////////////////////////////////// -->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="modal fade" id="mymodal">
+                <div class="modal-dialog ">
+                  <div class="modal-content" style="height: 520px;">
+
+                    <div class="modal-footer">
+                      <input class="btn btn-frfault" value="close" data-dismiss="modal">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- this is where will be the table of time -->
+      </div>
+    </div>
+
+    <div class="col-md-12 col-sm-7" id="map" style="height: 400px;margin-top:40px;margin-left:10px"></div>
+
+  </div>
+
+  <script>
+    console.log(`{{#each doctor}} {{this.name}} {{/each}}`,)
+
+    mapboxgl.accessToken =
+      "pk.eyJ1IjoiaWRpcmFtemFsaSIsImEiOiJjazlqM3h1OGgwMmszM2VtaHpmbjdyeWlwIn0.27yHyrGgEaIffiaDFSrJwA";
+    var map = new mapboxgl.Map({
+      container: "map",
+      style: "mapbox://styles/mapbox/streets-v11",
+      center: [`{{#each map}}{{this.Latitude
+}} {{/each}}`, `{{#each map}}{{this.Longitude
+
+}} {{/each}}`],
+      zoom: 15,
+    });
+
+    var marker = new mapboxgl.Marker()
+      .setLngLat([`{{#each map}}{{this.Latitude
+}} {{/each}}`, `{{#each map}}{{this.Longitude
+
+}} {{/each}}`])
+      .addTo(map);
+  </script>
+
+  </div>
+</section>

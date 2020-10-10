@@ -1,0 +1,69 @@
+<div class="d-flex justify-content-center h-100">
+	<div class="card" style="box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+		<div class="card-header">
+			<h3>Sign In</h3>
+			<div class="d-flex justify-content-end social_icon">
+				<span><i class="fab fa-facebook-square"></i></span>
+				<span><i class="fab fa-google-plus-square"></i></span>
+				<span><i class="fab fa-twitter-square"></i></span>
+			</div>
+		</div>
+		{{!-- our messages to the view--}}
+
+		{{#if hasMessgs}}
+		<div class="alert alert-success alert-dismissible fade show" role="alert">
+			{{susccess_msg}}
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		{{/if}}
+		{{#if hasErrors}}
+
+		{{# each messages}}
+		<div class="alert alert-danger alert-dismissible fade show" role="alert">
+			{{this}}
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+		</div>
+		{{/each}}
+
+		{{/if}}
+		<div class="card-body">
+			<form action="/signin/" method="POST">
+				<div class="input-group form-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fas fa-user"></i></span>
+					</div>
+					<input id="input1" type="text" class="form-control" placeholder="email" name="email">
+
+				</div>
+				<br>
+				<div class="input-group form-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text"><i class="fas fa-key"></i></span>
+					</div>
+					<input id="input2" type="password" class="form-control" placeholder="password" name="password">
+				</div>
+
+				<div class="row align-items-center remember">
+					<input type="checkbox">Remember Me
+				</div>
+				<div class="form-group">
+					<button type="submit" id="login" name="button" class="btn float-right login_btn"
+						disabled="false">Login</button>
+
+				</div>
+			</form>
+		</div>
+		<div class="card-footer">
+			<div class="d-flex justify-content-center links">
+				Don't have an account?<a href="/signup/">Sign Up</a>
+			</div>
+			<div class="d-flex justify-content-center">
+				<a href="#">Forgot your password?</a>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,28 @@
+
+html,body{
+background-image: url('https://images.unsplash.com/photo-1559019727-963e0a4eab74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1190&q=80');
+height: 100%;
+font-family: 'Numans', sans-serif;
+
+}
+.idir{
+
+align-content: center;
+width:400px;
+
+ 
+height: 100%;
+font-family: 'Numans', sans-serif;
+margin-left: 37%;
+border-top: 5%;
+
+}
+.ana{
+  border-top: 5%;
+}
+
+.login_btn{
+color: black;
+background-color: #FFC312;
+width: 150px;
+}

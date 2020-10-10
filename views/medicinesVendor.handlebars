@@ -1,0 +1,166 @@
+<!--<div class="site-wrap">
+
+
+    <div class="site-navbar py-2">
+
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+          </form>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="/" class="js-logo-clone">Health care</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="shop">Shop</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li class="has-children">
+                  <a href="#"><i class="fas fa-user"></i> User</a>
+                  <ul class="dropdown">
+                    {{#if chekuse}}
+          {{#if checkProfile}}
+            <a href="/users/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+             {{else}}
+            <a href="/users/profile"><i class="fas fa-address-card"></i> Profile</a>
+             <a href="/users/profileVendor"><i class="fas fa-address-card"></i> Profile profileVendor</a>
+              <a href="/users/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+             
+          {{/if}}
+            
+          {{else}}
+            <a href="/users/signup"> <i class="fas fa-user-plus"></i> Signup</a>
+            <a href="/users/signin"><i class="fas fa-sign-in-alt"></i> Signin</a>
+            <a href="/users/publishMedicines"><i class="fas fa-upload"></i>Publish-Medicines</a>
+            <a href="/users/signinofpublish"><i class="fas fa-sign-in-alt"></i> Signin of Publish</a>
+            
+          {{/if}}
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+           <div class="icons">
+            <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
+           
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
+                class="icon-menu"></span></a>
+          </div>
+          <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+-->
+
+{{#if userCart}}
+
+  <div style="padding-top: 30px">
+<table class="table table-bordered  ">
+    <thead>
+        <tr  class="table-secondary ">
+            <th scope="col" class="text-center">#</th>
+            <th scope="col" class="text-center">Product Name</th>
+            <th scope="col" class="text-center">Product Quantity </th>
+            <th scope="col" class="text-center">Product Price</th>
+            <th scope="col" class="text-center">Delete Medicines</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        {{#each userCart.selectedProduct as |val index|}}
+          <tr  class="table-light">
+            <th scope="row" class="text-center">{{index}}</th>
+            <td class="text-center">{{val.name}}</td>
+
+            <td class="text-center">
+                
+                {{val.quantity}}
+                 
+                </td>
+            <td class="text-center">{{val.price}}</td>
+            <td class="text-center"><a href="/deleteMedicines/{{index}}" class="btn btn-danger">Delete <i class="fas fa-trash-alt"></i></a></td>
+        </tr>  
+        {{/each}}
+        <tr class="table-primary">
+            <td colspan="3" style="font-weight: bold">Total Price</td>
+            <td style="font-weight: bold" class="text-center ">{{userCart.totalprice}} DA</td>
+        </tr>
+
+        
+        
+    </tbody>
+</table>
+</div>
+
+<div class="text-center">
+    <a href="#" class="btn btn-primary" style="width: 200px;">Send to us</a>
+</div>
+
+{{else}}
+<h1 class="text-center" style="padding-top: 200px;">your Medicines is empty</h1>
+    
+{{/if}}{{#if userCart}}
+
+  <div style="padding-top: 30px">
+<table class="table table-bordered  ">
+    <thead>
+        <tr  class="table-secondary ">
+            <th scope="col" class="text-center">#</th>
+            <th scope="col" class="text-center">Product Name</th>
+            <th scope="col" class="text-center">Product Quantity </th>
+            <th scope="col" class="text-center">Product Price</th>
+            <th scope="col" class="text-center">Delete Medicines</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        {{#each userCart.selectedProduct as |val index|}}
+          <tr  class="table-light">
+            <th scope="row" class="text-center">{{index}}</th>
+            <td class="text-center">{{val.name}}</td>
+
+            <td class="text-center">
+                
+                {{val.quantity}}
+                 
+                </td>
+            <td class="text-center">{{val.price}}</td>
+            <td class="text-center"><a href="/deleteMedicines/{{index}}" class="btn btn-danger">Delete <i class="fas fa-trash-alt"></i></a></td>
+        </tr>  
+        {{/each}}
+        <tr class="table-primary">
+            <td colspan="3" style="font-weight: bold">Total Price</td>
+            <td style="font-weight: bold" class="text-center ">{{userCart.totalprice}} DA</td>
+        </tr>
+
+        
+        
+    </tbody>
+</table>
+</div>
+
+<div class="text-center">
+    <a href="#" class="btn btn-primary" style="width: 200px;">Send to us</a>
+</div>
+
+{{else}}
+<h1 class="text-center" style="padding-top: 200px;">your Medicines is empty</h1>
+    
+{{/if}}

@@ -1,0 +1,11 @@
+#navb{
+  background-color:.bg-info;
+
+}
+
+a{
+    color: white;
+  }
+  #navigation,.navbar .navbar-default{
+    background-image: url("alvaro-reyes-qWwpHwip31M-unsplash.jpg");
+  }

@@ -1,0 +1,57 @@
+<body style="background: url(/images/ea393f271d_50148115_preparateur-en-pharmacie1.jpg)no-repeat;">
+
+
+
+
+    <div class="col-md-4 offset-md-4" style="padding-top: 30px;">
+        {{#each masseges}}
+        <div class="alert alert-danger" style=" margin-left:25px;width:350px;">
+            <p>{{this}}</p>
+        </div>
+
+        {{/each}}
+        <form action="signup" method="post" class="formsin" style="width: 450px; height:850px;margin-top:-3px;">
+            <label for="" style="font-size: 30px;margin-top:10px;">Sign up</label>
+            <div class="form-group" style="margin-bottom:20px;">
+                <input type="email" name="email" placeholder="enter your Email" class="form-control"
+                    style="height:50px;">
+            </div>
+            <div class="form-group" style="margin-bottom:20px;">
+                <input type="password" name="password" placeholder="enter your Password" class="form-control"
+                    style="height:50px;">
+            </div>
+            <div class="form-group" style="margin-bottom:20px;">
+                <input type="password" name="confirm-password" placeholder="Re enter your Confirm-Password"
+                    class="form-control" style="height:50px;">
+            </div>
+            <div class="form-group" style="margin-bottom:20px;">
+                <input type="text" name="firstname" placeholder="enter your first name" class="form-control"
+                    style="height:50px;">
+            </div>
+            <div class="form-group" style="margin-bottom:20px;">
+                <input type="text" name="lastname" placeholder="enter your last name" class="form-control"
+                    style="height:50px;">
+            </div>
+            <div class="form-group" style="margin-bottom:20px;">
+                <input type="number" name="numberf" placeholder="enter your number fone" class="form-control"
+                    style="height:50px;">
+            </div>
+            <div class="form-group" style="margin-bottom:20px;">
+                <input type="text" name="wilaya" placeholder="enter your wilaya" class="form-control"
+                    style="height:50px;">
+            </div>
+            <div class="form-group" style="margin-bottom:20px;">
+                <input type="text" name="city" placeholder="enter your city" class="form-control" style="height:50px;">
+            </div>
+            <div class="form-group" style="margin-bottom:20px;">
+                <input type="text" name="adress" placeholder="enter your adress" class="form-control"
+                    style="height:50px;">
+            </div>
+            <div class="form-group" style="margin-bottom:20px;">
+                <input type="text" name="pharmaciename" placeholder="enter your pharmacie name" class="form-control"
+                    style="height:50px;">
+            </div>
+            <button type="submit" class="btn btn-primary">SignUp</button>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,136 @@
+<!--<div class="site-wrap">
+
+
+    <div class="site-navbar py-2">
+
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+          </form>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="/" class="js-logo-clone">Health care</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="shop">Shop</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>
+                <li class="has-children">
+                  <a href="#"><i class="fas fa-user"></i> User</a>
+                  <ul class="dropdown">
+                    {{#if chekuse}}
+          {{#if checkProfile}}
+            <a href="/users/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+             {{else}}
+            <a href="/users/profile"><i class="fas fa-address-card"></i> Profile</a>
+             <a href="/users/profileVendor"><i class="fas fa-address-card"></i> Profile profileVendor</a>
+              <a href="/users/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+             
+          {{/if}}
+            
+          {{else}}
+            <a href="/users/signup"> <i class="fas fa-user-plus"></i> Signup</a>
+            <a href="/users/signin"><i class="fas fa-sign-in-alt"></i> Signin</a>
+            <a href="/users/publishMedicines"><i class="fas fa-upload"></i>Publish-Medicines</a>
+            <a href="/users/signinofpublish"><i class="fas fa-sign-in-alt"></i> Signin of Publish</a>
+            
+          {{/if}}
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+           <div class="icons">
+            <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
+           
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
+                class="icon-menu"></span></a>
+          </div>
+          <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+-->
+
+
+<div style="padding-top: 30px;" class="col-md-6 offset-md-3">
+{{#each masseges}}
+<div class="alert alert-danger">
+    <p>{{this}}</p>
+</div>
+    
+{{/each}}
+
+  <div class="form">
+    <form action="/checkout" method="POST" id="checkout-form">
+      <h1> Check IN</h1>
+      <div class="form-group">
+        <input type="text" name="name" value="{{{user.userName}}}" class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="text" name="FamilyName" value="{{{user.familyname}}}" class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="adress" name="adress" value="{{{user.adress}}}" class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="number" name="TelephoneNumber" value="{{{user.telphon}}}" class="form-control">
+      </div>
+    <!--  <div class="form-group">
+        <input type="text" name="credit card name" placeholder=" enter your credit card name" class="form-control">
+      </div>
+      <div class="form-group">
+        <input type="number" name="credit card number" placeholder=" enter your credit card number"
+          class="form-control" id="card-number">
+      </div>
+
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="number" name="expiration month" placeholder=" expiration month"
+              class="form-control" id="card-expiry-month">
+          </div>
+
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="number" name="expiration year" placeholder="expiration year"
+              class="form-control" id="card-expiry-year">
+          </div>
+
+        </div>
+      </div>
+        <div class="form-group">
+            <input type="number" name="CVC" placeholder="enter your credit card CVC"
+              class="form-control" id="card-cvc">
+          </div>
+
+          <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+<script type="text/javascript" src="/javascripts/checkout.js"></script>
+
+-->
+      <div class="text-center">
+        <button type="submit" class="btn btn-success"> Checkout {{ totalprice }} DA </button>
+      </div>
+    
+    </form>
+  </div>
+</div>
+</div>
+

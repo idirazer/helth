@@ -1,0 +1,334 @@
+
+<!--
+<div class="site-wrap">
+
+
+    <div class="site-navbar py-2">
+
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+          </form>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="/" class="js-logo-clone">Health Care</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li><a href="/">Home</a></li>
+                <li><a href="shop">Shop</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>     
+                <li class="has-children">
+                  <a class="active" href="#"><i class="fas fa-user"></i> User </a>
+                  <ul class="dropdown">
+                     {{#if chekuse}}
+          {{#if checkProfile}}
+            <a href="/users/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+             {{else}}
+            <a href="/users/profile"><i class="fas fa-address-card"></i> Profile</a>
+             <a href="/users/profileVendor"><i class="fas fa-address-card"></i> Profile profileVendor</a>
+              <a href="/users/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+             
+          {{/if}}
+            
+          {{else}}
+            <a href="/users/signup"> <i class="fas fa-user-plus"></i> Signup</a>
+            <a href="/users/signin"><i class="fas fa-sign-in-alt"></i> Signin</a>
+            <a href="/users/publishMedicines"><i class="fas fa-upload"></i>Publish-Medicines</a>
+            <a href="/users/signinofpublish"><i class="fas fa-sign-in-alt"></i> Signin of Publish</a>
+            
+          {{/if}}
+                    
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <a href="/Medicines" class="fas fa-pills">
+              <span class="badge badge-pill badge-danger"></span>
+              <span class="number">{{totalProducts}}</span>
+            </a>
+          
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
+                class="icon-menu"></span></a>
+          </div>
+          <div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    
+-->
+<input type="hidden" value="{{hasMassageError}}" id="hasMassageError">
+<div class="row" style="padding-left: 70px;">
+  <h1>{{{user.userName}}}</h1>
+</div>
+
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="text-center">
+      <img src="{{{user.image}}}" class="img-thumbnail" id="image">
+  
+ 
+    </div>
+    <br> <br>
+    <form action="uploadfile" method="post" enctype="multipart/form-data">
+
+       <input type="file" id="file" name="myfile">
+    <div class="d-none" id="actionbutton">
+    <input type="submit" value="Save" class="btn btn-info">
+      <a href="/users/profile" class="btn btn-danger">Cancel</a>
+    </div>
+    </form>
+   
+  </div>
+  <div class="col-sm-9">
+    <!-- debut of tabs (pill) تعدد صفحات  -->
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
+          aria-selected="true">home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+          aria-selected="false">Order</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
+          aria-selected="false">Contact</a>
+      </li>
+    </ul>
+    <div class="tab-content" id="myTabContent">
+      <!-- debut de la page home -->
+      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="container">
+          <div class="row" id="rowhome">
+            <div class="col-6 col-sm-3">
+
+
+                 <div class="w-100"></div>
+            
+
+              
+              <p class="font-weight-bold"> User Name</p>
+            </div>
+            {{#if  user.userName }}
+               <div class="col-6 col-sm-3">
+              <p class="font-weight-normal"> {{{user.userName}}}</p>
+            </div>
+            {{else}}
+               <div class="col-6 col-sm-3">
+              <p class="font-weight-normal"> please update your userName</p>
+            </div>
+            {{/if}}
+           
+
+            <div class="w-100"></div>
+              <div class="col-6 col-sm-3">
+            <p class="font-weight-bold"> Family Name</p>
+              </div>
+            {{#if  user.familyname }}
+               <div class="col-6 col-sm-3">
+              <p class="font-weight-normal"> {{{user.familyname}}}</p>
+            </div>
+            {{else}}
+               <div class="col-6 col-sm-3">
+              <p class="font-weight-normal"> please update your familyname</p>
+            </div>
+            {{/if}}
+                            <div class="w-100"></div>
+                    <div class="col-6 col-sm-3">
+                <p class="font-weight-bold"> Adress</p>
+                    </div>
+             {{#if  user.adress }}
+               <div class="col-6 col-sm-3">
+              <p class="font-weight-normal"> {{{user.adress}}}</p>
+            </div>
+            {{else}}
+               <div class="col-6 col-sm-3">
+              <p class="font-weight-normal"> please update your adress</p>
+            </div>
+            {{/if}}
+            
+               <div class="w-100"></div>
+                 <div class="col-6 col-sm-3">
+                <p class="font-weight-bold"> Telephone Number</p>
+                 </div>
+             {{#if  user.telphon }}
+               <div class="col-6 col-sm-3">
+              <p class="font-weight-normal"> {{{user.telphon}}}</p>
+            </div>
+            {{else}}
+               <div class="col-6 col-sm-3">
+              <p class="font-weight-normal"> please update your telphon</p>
+            </div>
+            {{/if}}
+
+            
+
+            <div class="w-100"></div>
+
+            <div class="col-6 col-sm-3">
+              <p class="font-weight-bold"> Email</p>
+            </div>
+            <div class="col-6 col-sm-3">
+              <p class="font-weight-normal"> {{{user.email}}}</p>
+            </div>
+            <div class="w-100"></div>
+
+            <div class="col-6 col-sm-3">
+              <p class="font-weight-bold"> Password</p>
+            </div>
+            <div class="col-6 col-sm-3">
+              <p class="font-weight-normal"> ******</p>
+            </div>
+
+            <div class="text-center">
+              <button type="button" class="btn btn-info" id="updatedata" style="margin-top: 50px;"> Update data</button>
+            </div>
+          </div>
+          
+          <form id="formupdate" class="d-none" method="POST" action="updateuser" style="margin-top: 30px;">
+           {{#each masseges}}
+            <div class="aler alert-danger">
+              <p>{{this}}</p>
+            </div>
+          {{/each}}
+            <div class="form-group">
+              <label for="UserName">User Name</label>
+              <input type="text" class="form-control"
+                placeholder=" please enter your User Name" name="username">
+            </div>
+              <div class="form-group">
+             <label for="familyname">Family Name</label>
+              <input type="text" class="form-control"
+                placeholder=" please enter your Family Name" name="familyname">
+            </div>
+            
+              <div class="form-group">
+              <label for="Adress">Adress</label>
+              <input type="text" class="form-control"
+                placeholder=" please enter your Adress" name="adress">
+            </div>
+              <div class="form-group">
+              <label for="telphon">Telephone Number</label>
+              <input type="number" class="form-control"
+                placeholder=" please enter your Telephone Number" name="telphon">
+            </div>
+              <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" class="form-control"
+                placeholder=" please enter your  Email" name="email">
+            </div>
+               <div class="form-group">
+              <label for="password">Password</label>
+              <input type="text" class="form-control"
+                placeholder=" please enter your  Password" name="password">
+            </div>
+
+            <div class="form-group">
+              <label for="confirm-password">Confirm Password</label>
+              <input type="text" class="form-control"
+                placeholder=" please enter your  Confirm Password" name="confirm-password">
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-info">Save</button>
+              <a href="/users/profile" class="btn btn-danger">Cancel</a>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- fin de la page home -->
+
+      <!-- debut de la page order -->
+      <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+        <div style="padding-top: 30px;">
+          {{#each userOrder as |val index|}}
+
+          <table class="table table-bordered  ">
+            <thead>
+              <tr class="table-secondary ">
+                <td colspan="4" style="font-weight: bold " class="text-center"> order number {{index}}</td>
+
+              </tr>
+
+              <tr class="table-light">
+                <th scope="col" class="text-center">#</th>
+                <th scope="col" class="text-center">Product Name</th>
+                <th scope="col" class="text-center">Product Quantity </th>
+                <th scope="col" class="text-center">Product Price</th>
+
+
+
+              </tr>
+            </thead>
+            <tbody>
+              {{#each this.cart.selectedProduct as |val indexProduct|}}
+              <tr class="table-light">
+                <th scope="row" class="text-center">{{indexProduct}}</th>
+                <td class="text-center">{{this.name}}</td>
+                <td class="text-center">{{this.quantity}}</td>
+                <td class="text-center">{{this.price}}</td>
+              </tr>
+              {{/each}}
+
+              <tr class="table-primary">
+                <td colspan="3" style="font-weight: bold"> total Price</td>
+                <td style="font-weight: bold" class="text-center"> {{this.orderPrice}} DA </td>
+              </tr>
+
+
+
+            </tbody>
+          </table>
+          {{/each}}
+        </div>
+      </div>
+      <!-- fin de la page order -->
+
+      <!-- debut de la page contact -->
+      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+
+      <!-- fin de la page contact -->
+    </div>
+  </div>
+</div>
+<!-- fin of tabs (pill) تعدد صفحات  -->
+
+
+<script>
+  console.log(document.getElementById('hasMassageError').value)
+  if(document.getElementById('hasMassageError').value === "true"){
+     $('#rowhome').addClass('d-none')
+    $('#formupdate').removeClass('d-none')
+  }
+  document.getElementById('file').onchange = function () {
+    const reader = new FileReader();
+
+    reader.onload = function () {
+      document.getElementById('image').src = this.result;
+    }
+    reader.readAsDataURL(this.files[0]);
+    $('#file').addClass('d-none');
+    $('#actionbutton').removeClass();
+  }
+
+  document.getElementById('updatedata').onclick = function () {
+    $('#rowhome').addClass('d-none')
+    $('#formupdate').removeClass('d-none')
+  }
+</script>

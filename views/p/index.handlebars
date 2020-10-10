@@ -1,0 +1,178 @@
+<div class="site-blocks-cover"
+  style="background-image: url('/images/un-nouveau-medicament-millions-dollars-mis-sur-marche-aux-usa.jpg');">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 mx-auto order-lg-2 align-self-center">
+        <div class="site-block-cover-content text-center">
+          <h2 class="sub-title">New Medicine Everyday</h2>
+          <h1>Welcome To Healt care pharmacie</h1>
+          <p>
+            <a href="D/shop" class="btn btn-primary px-5 py-3">Search about your pharmacie</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="site-section">
+  <div class="container">
+    <div class="row align-items-stretch section-overlap">
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="banner-wrap bg-primary h-100">
+          <a href="D/shop" class="h-100">
+            <h5>Free <br> Shopping</h5>
+            <p>
+              With health care
+              <strong>You can search, buy and sell the medicines witout paying.</strong>
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="banner-wrap h-100">
+          <a href="" class="h-100">
+            <h5>All <br> the medecines</h5>
+            <p>
+              With health care
+              <strong>You can found all the medicines available and the not available .</strong>
+            </p>
+          </a>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+        <div class="banner-wrap bg-warning h-100">
+          <a href="" class="h-100">
+            <h5>work<br>24/24 H </h5>
+            <p>
+              With health care
+              <strong> you can buy your medecines in evry time that you want.</strong>
+            </p>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="title-section text-center col-12">
+        <h2 class="text-uppercase">New Pharmacies</h2>
+      </div>
+    </div>
+    {{#each users}}
+    <div class="row">
+      {{#each this}}
+      <div class="col-sm-6 col-lg-4 text-center item mb-4">
+        <!-- <span class="tag">Sale</span>-->
+        {{#if ../../chekuse}}
+        <a
+          href="/singlephar/{{this._id}}/{{this.firstname}}/{{this.lastname}}/{{this.adress}}/{{this.city}}/{{this.wilaya}}/{{this.email}}/{{this.numberf}}">
+          <img src="/stylesheets/images/person_3.jpg" alt="Image"></a>
+        <h3 class="text-dark"><a href="#"></a>{{this.firstname}} {{this.lastname}}</h3>
+        {{else}}
+        <a href="signinu"> <img src="/stylesheets/images/person_3.jpg" alt="Image"></a>
+        <h3 class="text-dark"><a href="signinu"></a>{{this.firstname}} {{this.lastname}}</h3>
+        {{/if}}
+        <p class="price">
+          <!--<del>95.00</del> &mdash;-->{{this.adress}}</p>
+      </div>
+      {{/each}}
+    </div>
+    {{/each}}
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <a href="shop" class="btn btn-primary px-4 py-3">View All Pharmacies</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="title-section text-center col-12">
+        <h2 class="text-uppercase">Testimonials</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 block-3 products-wrap">
+        <div class="nonloop-block-3 no-direction owl-carousel">
+
+          <div class="testimony">
+            <blockquote>
+              <img src="/stylesheets/images/person_3.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
+              <p>&ldquo; member of web devlopment groupe that create this web site,she's 21 years old lived in ras el
+                oued, she study in mouhamed el bachir el ibrahimi bourdj bou arreridj.&rdquo;</p>
+            </blockquote>
+
+            <p>&mdash; Touati nesrine</p>
+          </div>
+
+          <div class="testimony">
+            <blockquote>
+              <img src="/stylesheets/images/person_2.jpg" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
+              <p>&ldquo; member of web devlopment groupe that create this web site,she's 21 years old lived in yachir,
+                she study in mouhamed el bachir el ibrahimi bourdj bou arreridj.&rdquo;</p>
+            </blockquote>
+
+            <p>&mdash; Amzali idir</p>
+          </div>
+
+          <div class="testimony">
+            <blockquote>
+              <img src="/images/2.png" alt="Image" class="img-fluid w-25 mb-4 rounded-circle">
+              <p>&ldquo; member of web devlopment groupe that create this web site,she's 20 years old lived in ras el
+                oued, she study in mouhamed el bachir el ibrahimi bourdj bou arreridj.&rdquo;</p>
+            </blockquote>
+
+            <p>&mdash; Boumaiza douniazad</p>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="site-section bg-secondary bg-image" style="background-image: url('/stylesheets/images/bg_2.jpg');">
+  <div class="container">
+    <div class="row align-items-stretch">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('/stylesheets/images/bg_1.jpg');">
+          <div class="banner-1-inner align-self-center">
+            <h2>Pharmacie Health care</h2>
+            <h6 style="color: black;">Is a big part of health care that give the people a big service to buy and sell
+              theirs medicines.
+            </h6>
+          </div>
+        </a>
+      </div>
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <a href="#" class="banner-1 h-100 d-flex"
+          style="background-image: url('/images/pharmacie-commerce-proximite-845x315.jpg');">
+          <div class="banner-1-inner ml-auto align-self-center ">
+            <h2>Rated by Expert</h2>
+            <h6 style="color: black;">Moussaoi boubaker,Our teacher whom help and courage use to create this web site.
+              </6>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+</body>

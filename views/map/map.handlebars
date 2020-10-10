@@ -1,0 +1,59 @@
+<!-- Page Preloder -->
+<div id="preloder">
+  <div class="loader"></div>
+</div>
+
+<!-- Hero Section end -->
+<section class="hero-section">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-6 col-sm-6" style="height: 500px;">
+
+        <div class="hs-text">
+          {{# each errors}}
+          <div class="alert alert-warning alert-dismissible fade show" style="height: 50px; " role="alert">
+            {{this.msg}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          {{/each}}
+          <div style="text-align: center;">
+            <h2 style="
+                  font-style: italic;
+                  font-weight: 900;
+                  border: 4px solid white;
+                ">
+              The Secend Step <br />
+              Chose Your Place Now...
+            </h2>
+            <form action="/map/map" method="POST">
+
+              <input type="hidden" name="id_user" placeholder="id" value="{{id}}">
+              <input type="hidden" name="Longitude" id=" Longitude" placeholder="recordes" value="77">
+              <input type="hidden" name="Latitude" id=" Latitude" placeholder="recordes" value="888">
+              <button class="btn btn-outline-warning btn-lg" type="submit"
+                style="font-style: italic; font-weight: 500;">confirmation</button>
+            </form>
+
+
+            <pre id="coordinates" class="coordinates"></pre>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-sm-6">
+        <div id="map"></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-slider owl-carousel">
+    <div class="hs-item set-bg" data-setbg="/picturs/img_map/hero-slider/celine-lityo-Ut0PA2ymJtk-unsplash.jpg">
+    </div>
+    <div class="hs-item set-bg" data-setbg="/picturs/img_map/hero-slider/rsz_1oxana-v-qoailamljbu-unsplash_1.jpg">
+    </div>
+    <div class="hs-item set-bg" data-setbg="/picturs/img_map/hero-slider/payson-wick-MCwVh2HXe-E-unsplash.jpg">
+    </div>
+  </div>
+</section>

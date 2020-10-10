@@ -1,0 +1,230 @@
+<!--<div class="site-wrap">
+
+
+    <div class="site-navbar py-2">
+
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+          </form>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="/" class="js-logo-clone">Health Care</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li><a href="/">Home</a></li>
+                <li class="active"><a href="shop">Shop</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contact">Contact</a></li>     
+                <li class="has-children">
+                  <a href="#"><i class="fas fa-user"></i> User</a>
+                  <ul class="dropdown">
+                     {{#if chekuse}}
+          {{#if checkProfile}}
+            <a href="/users/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+             {{else}}
+            <a href="/users/profile"><i class="fas fa-address-card"></i> Profile</a>
+             <a href="/users/profileVendor"><i class="fas fa-address-card"></i> Profile profileVendor</a>
+              <a href="/users/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a>
+             
+          {{/if}}
+            
+          {{else}}
+            <a href="/users/signup"> <i class="fas fa-user-plus"></i> Signup</a>
+            <a href="/users/signin"><i class="fas fa-sign-in-alt"></i> Signin</a>
+            <a href="/users/publishMedicines"><i class="fas fa-upload"></i>Publish-Medicines</a>
+            <a href="/users/signinofpublish"><i class="fas fa-sign-in-alt"></i> Signin of Publish</a>
+            
+          {{/if}}
+                    
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <a href="/Medicines" class="fas fa-pills">
+              <span class="badge badge-pill badge-danger"></span>
+              <span class="number">{{totalProducts}}</span>
+            </a>
+          
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
+                class="icon-menu"></span></a>
+          </div>
+          <div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+-->
+<div class="bg-light py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-0"><a href="/shop">Home</a> <span class="mx-2 mb-0">/</span> <strong
+          class="text-black">Store</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="site-section">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-6">
+        <h3 class="mb-3 h6 text-uppercase text-black d-block">Filter by Price</h3>
+        <div id="slider-range" class="border-primary"></div>
+        <input type="text" name="text" id="amount" class="form-control border-0 pl-0 bg-white" disabled="" />
+      </div>
+      <div class="col-lg-6">
+        <!--search box start-->
+        <form class="search-box" action="" method="" style="">
+          <input type="text" name="" value="" placeholder="Search">
+          <button class="search-btn" type="button" name="button">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+        <!--search box end-->
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+          <a class="dropdown-item" href="#">Relevance</a>
+          <a class="dropdown-item" href="#">Name, A to Z</a>
+          <a class="dropdown-item" href="#">Name, Z to A</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Price, low to high</a>
+          <a class="dropdown-item" href="#">Price, high to low</a>
+        </div>
+      </div>
+    </div>
+
+    <!--{{#each userbs}}
+<div class="row">
+    {{#each this}}
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="text-center">
+                <img src="{{this.image}}" class="card-img-top" alt="...">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>
+                <p class="card-text">
+                    form: {{this.information.utilisation}} <br>
+                    dosage :{{this.information.Quantum}} <br>
+                    quantity : {{this.information.quantite}} <br>
+                    Advice :{{this.information.consigne}} </p>
+                    -->
+    <!-- <div>
+
+                    <div class="price float-left"> {{this.price}}DA</div>
+                   
+                   {{#if ../../chekuse}}
+                      <a href="/addTocart/{{this._id}}/{{this.price}}/{{this.productName}}" class="btn btn-info float-right" >Demand</a>
+                      
+                   {{else}}
+                       <button type="button" class="btn btn-info float-right" data-toggle="modal" data-target="#exampleModalCenter">
+                          Demand
+                      </button> 
+                   {{/if}}
+                    
+               
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{/each}}
+</div>
+
+{{/each}}
+-->
+
+
+
+
+    {{#each products}}
+    <div class="row">
+      {{#each this}}
+      <div class="col-sm-4">
+        <div class="card">
+          <div class="text-center">
+            <img src="{{this.imgePath}}" class="card-img-top" alt="...">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">{{this.productName}}</h5>
+            <p class="card-text">
+              Medicine Name: {{this.information.utilisation}} <br>
+              Form :{{this.information.consigne}} </p>
+            Dosage :{{this.information.Quantum}} <br>
+            Quantity : {{this.information.quantite}} <br>
+
+            <div>
+              <div class="price float-left"> {{this.price}}DA</div>
+
+              {{#if ../../chekuse}}
+              <a href="/addTocart/{{this._id}}/{{this.price}}/{{this.productName}}"
+                class="btn btn-info float-right">Demand</a>
+
+              {{else}}
+              <button type="button" class="btn btn-info float-right" data-toggle="modal"
+                data-target="#exampleModalCenter">
+                Demand
+              </button>
+              {{/if}}
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {{/each}}
+    </div>
+
+    {{/each}}
+
+    <!--{{#each products}}
+        <div class="row">
+          {{#each this}}
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <a href="shop-single"> <img src="{{this.imgePath}}" alt="Image"></a>
+            <h3 class="text-dark"><a href="shop-single">{{this.productName}}</a></h3>
+            <p class="price">{{this.price}} DA</p>
+          </div>
+          {{/each}}
+        </div>
+        {{/each}}
+        
+      </div>
+    </div>-->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Sign In</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+
+          </div>
+          <div class="modal-body">
+            You can't demand any medication before you sign in
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+            <a href="/users/signin" class="btn btn-info"> sign in </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>

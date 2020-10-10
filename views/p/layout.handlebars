@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+  <script src="https://ajax.googleapis.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+
+   <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
+  <link rel="stylesheet" href="/stylesheets/fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/css/magnific-popup.css">
+  <link rel="stylesheet" href="/stylesheets/css/jquery-ui.css">
+  <link rel="stylesheet" href="/stylesheets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="/stylesheets/css/owl.theme.default.min.css">
+
+
+  <link rel="stylesheet" href="/stylesheets/css/aos.css">
+
+  <link rel="stylesheet" href="/stylesheets/css/style.css">
+
+  
+  </head>
+  <body>
+     <div class="site-wrap">
+
+
+    <div class="site-navbar py-2">
+
+      <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="#" method="post">
+            <input type="text" class="form-control" placeholder="Search keyword and hit enter...">
+          </form>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="index" class="js-logo-clone">Health Care</a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                <li ><a href="/">Home</a></li>
+                <li ><a href="shop">Pharmacies</a></li>
+                <li><a href="about">About</a></li>
+                <li class="has-children"class="active">
+                  <a href="#"><i class="fas fa-user"></i> User</a>
+                  <ul class="dropdown">
+                    {{#if chekuse}}
+          {{#if checkProfile}}
+          <li><a  href="/users/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a></li>
+             {{else}}
+            <li><a  href="/users/profile"><i class="fas fa-address-card"></i> Profile</a></li>
+              <li><a href="/users/logout"> <i class="fas fa-sign-out-alt"></i> Logout</a></li>
+          {{/if}}
+            
+          {{else}}
+            <li><a href="/users/signup"> <i class="fas fa-user-plus"></i> Signup</a></li>
+            <li><a href="/users/signin"><i class="fas fa-sign-in-alt"></i> Signin</a></li>
+            
+          {{/if}}  
+                    
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+           <div class="icons">
+            <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a>
+           
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
+                class="icon-menu"></span></a>
+          </div>
+          <div>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+    {{{body}}}
+   <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+
+            <div class="block-7">
+              <h3 class="footer-heading mb-4">About Us</h3>
+              <p>We are a groupe of web devlopment ,we create this web site to make the medecine domaine easy because we care for the health of the human beings .</p>
+            </div>
+
+          </div>
+          <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
+            <h3 class="footer-heading mb-4">Quick Links</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Search for Docctor</a></li>
+              <li><a href="#">Particilar</a></li>
+              <li><a href="#">Buy medecines</a></li>
+              <li><a href="#">Published medecines</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="block-5 mb-5">
+              <h3 class="footer-heading mb-4">Contact Info</h3>
+              <ul class="list-unstyled">
+                <li class="address">Bourdj Bou Arreridj , Algeria</li>
+                <li class="phone"><a href="tel://23923929210">+213 6 75 91 64 39</a></li>
+                <li class="email">Healthcare@gmail.com</li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+       
+      </div>
+    </footer>
+ 
+
+    <script src="/stylesheets/js/jquery-3.3.1.min.js"></script>
+  <script src="/stylesheets/js/jquery-ui.js"></script>
+  <script src="/stylesheets/js/popper.min.js"></script>
+  <script src="/stylesheets/js/bootstrap.min.js"></script>
+  <script src="/stylesheets/js/owl.carousel.min.js"></script>
+  <script src="/stylesheets/js/jquery.magnific-popup.min.js"></script>
+  <script src="/stylesheets/js/aos.js"></script>
+
+  <script src="/stylesheets/js/main.js"></script>
+
+
+
+
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

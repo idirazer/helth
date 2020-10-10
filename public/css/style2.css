@@ -1,0 +1,223 @@
+
+.card-offer {
+  position: relative;
+  text-align: center;
+  border: 0;
+  box-shadow: 0 0 50px rgba(0, 0, 0, .2);
+  transition: transform .3s ease-in
+}
+
+.card-offer .card-header, .card-offer .card-footer {
+  color: #fff
+}
+
+.card-offer .card-title, .card-offer .offer-price {
+  font-family: "Oswald", Arial, sans-serif;
+  font-weight: 700
+}
+
+.card-offer .card-title {
+  margin: 0;
+  font-size: 1.4rem
+}
+
+.card-offer .card-body {
+  padding-bottom: 2.4rem
+}
+
+.card-offer .card-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0
+}
+
+.card-offer .card-body ul li {
+  margin: .7rem 0
+}
+
+.card-offer .card-body ul.list-bullet {
+  text-align: left
+}
+
+.card-offer .card-body ul.list-bullet li {
+  margin: 1.2rem 0
+}
+
+.card-offer .offer-price {
+  padding: .8rem 0;
+  font-size: 2rem;
+  line-height: 1.2
+}
+
+.card-offer small {
+  line-height: 1
+}
+
+.card-offer .card-footer>.btn {
+  margin-top: -3.2rem
+}
+
+.card-offer .btn-outline-light {
+  background-color: #fff;
+  font-weight: 700
+}
+
+.card-offer .btn-outline-light:hover {
+  background-color: #ff6d00
+}
+
+.card-offer .offer-description {
+  position: relative;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: .9rem;
+  font-weight: 500
+}
+
+.card-offer .offer-description:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  left: 10%;
+  height: 1px;
+  background-color: #adb5bd
+}
+
+.card-offer.offer-standard .card-header, .card-offer.offer-standard .card-footer {
+  background-color: #012e5b
+}
+
+.card-offer.offer-premium .card-header, .card-offer.offer-premium .card-footer {
+  background-color: #46c0e5
+}
+
+.card-offer.offer-premiumplus .card-header, .card-offer.offer-premiumplus .card-footer {
+  background-color: #3872f6
+}
+
+.card-offer.offer-highlight .card-header, .card-offer.offer-highlight .card-footer {
+  padding-bottom: 1.5rem
+}
+
+.card-offer.offer-highlight .card-header {
+  padding-top: 1.5rem
+}
+
+.offer-stamp {
+  position: absolute;
+  right: -10px;
+  top: -30px;
+  width: 100px;
+  height: 100px
+}
+
+.offer-ttc {
+  display: block
+}
+
+.offer-table {
+  margin-bottom: 1.5rem
+}
+
+.offer-table tr:nth-child(odd) td {
+  background-color: #f8f9fa
+}
+
+.offer-table .checked {
+  text-align: center
+}
+
+.offer-table .text-offer {
+  color: #4e4e4e
+}
+
+.offer-table .tooltip {
+  position: static;
+  margin-top: .5rem;
+  background: #01a0c7
+}
+
+.offer-table .tooltip .text-offer {
+  color: #fff
+}
+
+.offer-table .offer-th {
+  text-align: center;
+  font-weight: 400
+}
+
+.offer-table .offer-th .offer-heading {
+  position: relative;
+  margin: auto;
+  display: inline-block
+}
+
+.offer-table .offer-th .offer-heading .offer-stamp {
+  right: -50px;
+  top: -22px
+}
+
+.offer-table .offer-th .offer-heading .offer-title {
+  font-size: 1.2rem;
+  font-weight: 700
+}
+
+.offer-table .offer-th .offer-heading .offer-price {
+  padding: .5rem 0;
+  font-size: 1.5rem;
+  line-height: 1.2
+}
+
+.offer-table .offer-th .offer-heading small {
+  line-height: 1;
+  display: block
+}
+
+.offer-table .offer-th .offer-heading small+.btn {
+  margin-top: .5rem
+}
+
+.offer-table .offer-td {
+  position: relative;
+  max-width: 400px
+}
+
+.offer-table .offer-td .icon-question {
+  margin-left: .3rem;
+  color: #01a0c7
+}
+
+@media (min-width:576px) {
+  .card-offer {
+    margin: 2rem
+  }
+}
+
+@media (min-width:992px) {
+  .card-offer {
+    margin: 0
+  }
+
+  .card-offer:hover {
+    transform: scale(1.1)
+  }
+
+  .card-offer.h-equal {
+    height: 1124px
+  }
+
+  .offer-table {
+    margin-bottom: 1.5rem
+  }
+
+  .offer-table .tooltip {
+    position: absolute;
+    width: 400px;
+    margin: 0;
+    background-color: #01a0c7
+  }
+}
+/* .have{
+  background-image: url(https://images.unsplash.com/photo-1559019727-963e0a4eab74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1190&q=80.jpg);
+} */

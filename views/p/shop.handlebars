@@ -1,0 +1,68 @@
+
+
+
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="index">Home</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">Pharmacies</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        
+        <div class="row">
+          <div class="col-lg-6" style="margin-bottom: 40px;">
+            <h3 class="mb-3 h6 text-uppercase text-black d-block">Filter by Pharmacies</h3>
+            <div id="slider-range" class="border-primary"></div>
+          </div>
+          <div class="col-lg-6">
+            <!--search box start-->  
+    <form class="search-box" action="" method="" style="">
+      <input type="text" name="" value="" placeholder="Search">
+      <button class="search-btn" type="button" name="button">
+       <i class="fas fa-search"></i>
+      </button>
+    </form>
+    <!--search box end-->
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+              <a class="dropdown-item" href="#">Relevance</a>
+              <a class="dropdown-item" href="#">Name, A to Z</a>
+              <a class="dropdown-item" href="#">Name, Z to A</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Price, low to high</a>
+              <a class="dropdown-item" href="#">Price, high to low</a>
+            </div>
+          </div>
+        </div>
+
+        {{#each users}}
+        <div class="row">
+          {{#each this}}
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <a href="/shop-single/{{this._id}}/{{this.firstname}}/{{this.lastname}}/{{this.pharmaciename}}/{{this.city}}/{{this.wilaya}}/{{this.adress}}/{{this.numberf}}"> <img src="/stylesheets/images/pharmacie-accueil_1827e28afb1eec03f49c7ce694d46213.jpg" alt="Image"></a>
+            <h3 class="text-dark"><a href="/shop-single/{{this._id}}/{{this.firstname}}/{{this.lastname}}/{{this.pharmaciename}}/{{this.city}}/{{this.wilaya}}/{{this.adress}}/{{this.numberf}}">{{this.firstname}} {{this.lastname}}</a></h3>
+            <p class="price">{{this.adress}}</p>
+          </div>
+          {{/each}}
+        </div>
+        {{/each}}
+      <!--{{#each products}}
+        <div class="row">
+          {{#each this}}
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <a href="shop-single"> <img src="{{this.imgePath}}" alt="Image"></a>
+            <h3 class="text-dark"><a href="shop-single">{{this.productName}}</a></h3>
+            <p class="price">{{this.price}} DA</p>
+          </div>
+          {{/each}}
+        </div>
+        {{/each}}
+        
+      </div>
+    </div>-->
+
+    
+   
+

@@ -1,0 +1,393 @@
+
+
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="index.html">Home</a> <span class="mx-2 mb-0">/</span> <a
+              href="shop.html">Pharmacie</a> <span class="mx-2 mb-0">/</span> <strong class="text-black">{{pharmaciename}}</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 mr-auto">
+             <h2 class="text-black">{{firstname}} {{lastname}}</h2>
+            <p>.</p>
+            
+            <p> <strong class="text-primary h4"></strong></p>
+            <div class="border text-center">
+              <img src="/stylesheets/images/pharmacie-accueil_1827e28afb1eec03f49c7ce694d46213.jpg" alt="Image" class="img-fluid p-5">
+            </div>
+            <div class="mt-5">
+              
+              <ul class="nav nav-pills mb-3 custom-pill" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active"  data-toggle="pill" href="#" role="tab"
+                   aria-selected="true">Information</a>
+                </li>
+            
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                  <table class="table custom-table">
+                    
+                    <tbody>
+                      <tr>
+                        <th scope="row">Pharmacie name</th>
+                        <td>{{firstname}} {{lastname}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">wilaya</th>
+                        <td>{{wilaya}}</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">city</th>
+                        <td>{{city}}</td>
+                      </tr>
+                       <tr>
+                        <th scope="row">address</th>
+                        <td>{{adress}}</td>
+                      </tr>
+                      
+                      
+                    </tbody>
+                  </table>
+                </div>
+                </div>
+                </div>
+
+          </div>
+          <div class="col-md-6">
+
+
+
+
+            <form action="/upload/image/{{id}}" method="POST" enctype="multipart/form-data">
+            <div class="row">
+              <h3 style="color: #51eaea;">Contact {{pharmaciename}} pharmacie</h3>
+              <div class="p-3 p-lg-5 border">
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <label  class="text-black">Name <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_fname" name="name">
+                  </div>
+                    <div class="col-md-6">
+                    <label  class="text-black">Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="c_email" name="email" placeholder="">
+                  </div>
+                </div>
+                  <div class="form-group row">
+                  <div class="col-md-12">
+                    <label class="text-black">City <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_lname" name="city">
+                  </div>
+                </div>
+                
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label class="text-black">Address <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="c_subject" name="adress">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label class="text-black">Prescription <span class="text-danger">*</span></label>
+                    </div>
+                    <div class="col-md-12">
+                    <input type="file" name="image" multiple>                  
+                </div></div>
+                
+                <div class="form-group row">
+                  <div class="col-md-12">
+                    <label  class="text-black">Message <span class="text-danger">*</span></label>
+                    <textarea name="messmessage" id="c_message" cols="30" rows="7" class="form-control"></textarea>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-lg-12">
+                    <button type="submit" class="btn-primary btn-lg btn-block">Send</button>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </form>
+          </div>
+          
+
+
+
+
+          <div class="container">
+        <div class="row">
+          <div class="title-section text-center col-12">
+            <h2 class="text-uppercase">{{pharmaciename}} medecines</h2>
+          </div>
+        </div>
+        {{#each products}}
+        <div class="row">
+          {{#each this}}
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+           <!-- <span class="tag">Sale</span>-->
+           {{#if ../../chekuse}}
+            <a href="}"> <img src="{{this.imgePath}}" alt="Image"></a>
+            <h3 class="text-dark"><a href="#"></a></h3>
+            {{else}}
+             <a href="signinu"> <img src="{{this.imgePath}}" alt="Image"></a>
+            <h3 class="text-dark"><a href="">{{this.productName}}</a></h3>
+            {{/if}}
+            <p class="price"><!--<del>95.00</del> &mdash;-->{{this.price}}</p>
+          </div>
+           {{/each}}
+        </div>
+         {{/each}}
+        
+       
+      </div>
+    </div>
+
+
+
+    <!--
+            {{#each products}}
+        <div class="row">
+          <div class="col-lg-4">
+          {{#each this}}
+          <div class="col-sm-6 col-lg-4 text-center item mb-4">
+            <a href="#"> <img src="{{this.imgePath}}" alt="Image"></a>
+            <h3 class="text-dark"><a href="">{{this.productName}}</a></h3>
+            <p class="price">{{this.price}}</p>
+          </div>
+          {{/each}}
+          </div>
+        </div>
+        {{/each}}
+
+    </div>
+      </div>
+    </div>-->
+
+    <div class="site-section bg-secondary bg-image" style="background-image: url('/stylesheets/images/bg_2.jpg');">
+      <div class="container">
+        <div class="row align-items-stretch">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('/stylesheets/images/bg_1.jpg');">
+              <div class="banner-1-inner align-self-center">
+                <h2>Pharmacie Health care</h2>
+                <h6 style="color: black;">Is a big part of health care that give the people a big service to buy and sell theirs medicines.
+                </h6>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('/images/pharmacie-commerce-proximite-845x315.jpg');">
+              <div class="banner-1-inner ml-auto align-self-center ">
+                <h2>Rated by Expert</h2>
+                <h6 style="color: black;">Moussaoi boubaker,Our teacher whom help and courage use to create this web site.
+                </6>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+    <!--
+    <div class="bg-light py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 mb-0"><a href="index">Home</a> <span class="mx-2 mb-0">/</span> <a
+              href="shop">Store</a> 
+        {{#if userCart}}
+
+              {{#each userCart.selectedProduct as |val index|}}
+              <span class="mx-2 mb-0">/</span> <strong class="text-black">{{val.name}}</strong></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 mr-auto">
+            <div class="border text-center">
+              <img src="/stylesheets/images/product_07_large.png" alt="Image" class="img-fluid p-5">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h2 class="text-black">Ibuprofen Tablets, 200mg</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, vitae, explicabo? Incidunt facere, natus
+              soluta dolores iusto! Molestiae expedita veritatis nesciunt doloremque sint asperiores fuga voluptas,
+              distinctio, aperiam, ratione dolore.</p>
+            
+
+            <p><del>$95.00</del>  <strong class="text-primary h4">$55.00</strong></p>
+
+            
+            
+            <div class="mb-5">
+              <div class="input-group mb-3" style="max-width: 220px;">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-primary js-btn-minus" type="button">&minus;</button>
+                </div>
+                <input type="text" class="form-control text-center" value="1" placeholder=""
+                  aria-label="Example text with button addon" aria-describedby="button-addon1">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-primary js-btn-plus" type="button">&plus;</button>
+                </div>
+              </div>
+    
+            </div>
+            <p><a href="cart" class="buy-now btn btn-sm height-auto px-4 py-3 btn-primary">Add To Cart</a></p>
+
+            <div class="mt-5">
+              <ul class="nav nav-pills mb-3 custom-pill" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                    aria-controls="pills-home" aria-selected="true">Ordering Information</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                    aria-controls="pills-profile" aria-selected="false">Specifications</a>
+                </li>
+            
+              </ul>
+              <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                  <table class="table custom-table">
+                    <thead>
+                      <th>Material</th>
+                      <th>Description</th>
+                      <th>Packaging</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">OTC022401</th>
+                        <td>Pain Management: Acetaminophen PM Extra-Strength Caplets, 500 mg, 100/Bottle</td>
+                        <td>1 BT</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">OTC022401</th>
+                        <td>Pain Management: Acetaminophen PM Extra-Strength Caplets, 500 mg, 100/Bottle</td>
+                        <td>144/CS</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">OTC022401</th>
+                        <td>Pain Management: Acetaminophen PM Extra-Strength Caplets, 500 mg, 100/Bottle</td>
+                        <td>1 EA</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+            
+                  <table class="table custom-table">
+            
+                    <tbody>
+                      <tr>
+                        <td>HPIS CODE</td>
+                        <td class="bg-light">999_200_40_0</td>
+                      </tr>
+                      <tr>
+                        <td>HEALTHCARE PROVIDERS ONLY</td>
+                        <td class="bg-light">No</td>
+                      </tr>
+                      <tr>
+                        <td>LATEX FREE</td>
+                        <td class="bg-light">Yes, No</td>
+                      </tr>
+                      <tr>
+                        <td>MEDICATION ROUTE</td>
+                        <td class="bg-light">Topical</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            
+                </div>
+            
+              </div>
+            </div>
+
+    
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    {{/if}}
+
+    <div class="site-section bg-secondary bg-image" style="background-image: url('/stylesheets/images/bg_2.jpg');">
+      <div class="container">
+        <div class="row align-items-stretch">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('/stylesheets/images/bg_1.jpg');">
+              <div class="banner-1-inner align-self-center">
+                <h2>Pharma Products</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <a href="#" class="banner-1 h-100 d-flex" style="background-image: url('/stylesheets/images/bg_2.jpg');">
+              <div class="banner-1-inner ml-auto  align-self-center">
+                <h2>Rated by Experts</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae ex ad minus rem odio voluptatem.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+  </div>
+ <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+
+            <div class="block-7">
+              <h3 class="footer-heading mb-4">About Us</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quae reiciendis distinctio voluptates
+                sed dolorum excepturi iure eaque, aut unde.</p>
+            </div>
+
+          </div>
+          <div class="col-lg-3 mx-auto mb-5 mb-lg-0">
+            <h3 class="footer-heading mb-4">Quick Links</h3>
+            <ul class="list-unstyled">
+              <li><a href="#">Supplements</a></li>
+              <li><a href="#">Vitamins</a></li>
+              <li><a href="#">Diet &amp; Nutrition</a></li>
+              <li><a href="#">Tea &amp; Coffee</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="block-5 mb-5">
+              <h3 class="footer-heading mb-4">Contact Info</h3>
+              <ul class="list-unstyled">
+                <li class="address">203 Fake St. Mountain View, San Francisco, California, USA</li>
+                <li class="phone"><a href="tel://23923929210">+2 392 3929 210</a></li>
+                <li class="email">emailaddress@domain.com</li>
+              </ul>
+            </div>
+
+
+          </div>
+        </div>
+       
+      </div>
+    </footer>
+ 
+
+</body>-->
+

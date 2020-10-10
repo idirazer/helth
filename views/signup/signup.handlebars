@@ -1,0 +1,166 @@
+<div class="idir">
+
+  <!-- Modal content -->
+
+  <div class="modal-content  "
+    style="margin-bottom:50px; margin-top:20px ;  border-radius: 15px 50px; /*border:4px solid 	#7CFC00; */  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);/*box-shadow: 10px 15px 10px grey;">
+    <!-- Modal body -->
+    <div class="modal-body " style="">
+
+      <!-- Pills navs -->
+      <ul class="nav md-pills nav-justified pills-info">
+        <li class="nav-item">
+          <div class="form-group">
+            <button type="submit" name="button" class="btn float-right login_btn" aria-disabled="true"><a
+                style=" text-decoration:none;" href="/signin/">
+                <h5 id="h5h" style="color:#F0FFF0">loggin</h5>
+              </a></button>
+
+          </div>
+      </ul>
+
+
+      <div class="tab-content py-0">
+
+
+        <div class="tab-pane fade in active show" id="navbarLogin-signup" role="tabpanel">
+
+          <!-- Default form register  -->
+          <form id="register" class="text-center" action="/signup/" method="POST">
+            <div class="my-3">
+              <div class="wp-social-login-widget">
+                <div class="wp-social-login-provider-list">
+                  <a rel="nofollow" href="" title="Connect with Facebook"
+                    class="wp-social-login-provider wp-social-login-provider-facebook" data-provider="Facebook">
+                    <img src="https://img.icons8.com/color/48/000000/facebook-circled.png">
+                  </a>
+                  <a rel="nofollow" href="" title="Connect with Google"
+                    class="wp-social-login-provider wp-social-login-provider-google" data-provider="Google">
+                    <img src="https://img.icons8.com/color/48/000000/google-logo.png">
+                  </a>
+                  <a rel="nofollow" href="" title="Connect with Twitter"
+                    class="wp-social-login-provider wp-social-login-provider-twitter" data-provider="Twitter">
+                    <img src="https://img.icons8.com/color/48/000000/twitter.png">
+                  </a>
+                </div>
+                <div class="wp-social-login-widget-clearing"></div>
+
+              </div>
+
+            </div>
+            <!-- Social login -->
+            {{#if hasErrors}}
+
+            {{# each errors}}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              {{this.msg}}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            {{/each}}
+
+            {{/if}}
+            <!-- Default input name -->
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-user"></i></span>
+              </div>
+              <input type="text" id="name" class="form-control" name="name" placeholder="Your name">
+
+            </div>
+
+            <br>
+
+            <!-- Default input username -->
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-users"></i></span>
+              </div>
+              <input type="text" id="username" class="form-control" name="username" placeholder="username"
+                value="{{username}}">
+            </div>
+            <br>
+            <!-- Default input email -->
+            <div class=" input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-envelope-open"></i></span>
+              </div>
+              <input type="text" id="email" class="form-control" name="email" placeholder="Your email"
+                value="{{email}}">
+            </div>
+            <br>
+            <!-- Default input password -->
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+              <input type="password" id="password" class="form-control" name="password" placeholder="Your password">
+            </div>
+            <br>
+            <!-- Default input password -->
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-key"></i></span>
+              </div>
+              <input type="password" id="password2" class="form-control" name="password2" placeholder="Repeat password">
+            </div>
+            <br>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-birthday-cake"></i></span>
+              </div>
+              <input type="date" id="birthday" class="form-control" name="birthday" placeholder="your birthday"
+                value="{{birthday}}">
+            </div>
+            <br>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-user-tag"></i></span>
+              </div>
+
+              <select name="specialty" class="form-control">
+
+                <option value="" disabled selected>your specialty</option>
+
+                {{# each specialtys}}
+
+                {{# each this}}
+
+                <option value="{{ this._id}}">{{ this.name_of_specialty}}</option>
+
+
+                {{/each}}
+                {{/each}}
+              </select>
+
+
+
+              {{!-- <input type="" id="specialty" class="form-control" name="specialty" placeholder="your specialty"
+                value="{{specialty}}"> --}}
+            </div>
+            <br>
+            <div class="input-group form-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text"><i class="fas fa-address-card"></i></span>
+              </div>
+              <input type="text" id="address" class="form-control" name="address" placeholder="your address"
+                value="{{address}}">
+            </div>
+            <div class="mt-4">
+              <p class="small grey-text">By signing up you agree to data processing by the administrator <a
+                  target="_blank" href="#">Privacy Policy</a>.
+              </p>
+              <button class="btn btn-info btn-md mb-4 waves-effect waves-light" id="AJAXAuthRegisterBtn" type="submit"
+                value="SIGNUP">Sign up</button>
+            </div>
+          </form>
+
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+</div>

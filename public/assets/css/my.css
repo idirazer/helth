@@ -1,0 +1,16 @@
+.disabl {
+ pointer-events: none;
+
+ opacity: 0.4;
+
+}
+
+.myborder {
+ border-bottom: 4px #4680ff;
+ border-bottom-style: solid;
+
+}
+
+/* #input1 #input2 {
+ margin-left: 20px;
+} */

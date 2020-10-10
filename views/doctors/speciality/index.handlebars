@@ -1,0 +1,165 @@
+<section class="navbar navbar-default navbar-static-top" role="navigation">
+  <div class="container">
+
+    <div class="navbar-header">
+      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+        <span class="icon icon-bar"></span>
+      </button>
+
+      <!-- lOGO TEXT HERE -->
+      <a href="index.html" class="navbar-brand"><i class="fa fa-h-square"></i>ealth Center</a>
+    </div>
+
+    <!-- MENU LINKS -->
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#top" class="smoothScroll">Home</a></li>
+        <li><a href="#about" class="smoothScroll">About Us</a></li>
+        <li><a href="#team" class="smoothScroll">Doctors</a></li>
+        <li><a href="#news" class="smoothScroll">News</a></li>
+        <li><a href="#google-map" class="smoothScroll">Contact</a></li>
+        <li class="appointment-btn"><a href="#appointment">Make an appointment</a></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+<div class="container">
+
+  <ol class="breadcrumba breadcrumb-fill2 style4">
+    <li><a href="javascript:void(0);">
+        <div><i class=" po fa fa-home"></i></div>
+      </a></li>
+    <li><a href="javascript:void(0);">Home</a></li>
+
+    <li><a href="javascript:void(0);">Multimeta Data</a></li>
+  </ol>
+
+  <br><br>
+  <br><br>
+  <section id="news" style="
+      margin-top:-9px;
+        padding-top: 20px;
+        border-left-width: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom:2px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      ">
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <!-- SECTION TITLE -->
+        <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+          <h2>Our Specialities</h2>
+        </div>
+      </div>
+
+
+
+
+
+
+
+      {{# each specialtys}}
+
+      <div class="col-xs-4 col-md-3 idir psps" style="">
+
+        <div class="thumbnail noborder">
+
+
+          <a href="/speciality/doctor_special/{{this._id}}"></a>
+
+
+          <img src="{{this.image_pathe}}" alt="speciality" style="width: 100%;" />
+
+          <div class="caption" style="padding-top: 0px;height: 100px; overflow: scroll;">
+            {{!-- {{# each this}} --}}
+            <h3 style="text-align: left; letter-spacing: 1px;">
+
+
+
+              {{this.name_of_specialty}}
+
+
+            </h3>
+            {{!-- {{/each}} --}}
+
+          </div>
+          </a>
+        </div>
+        {{!-- {{# each this}} --}}
+        <ul class="social-icon">
+
+          <li><a href="/speciality/doctor_special/{{this._id}}" class="fa fa-chevron-circle-right"></a></li>
+
+        </ul>
+        {{!-- {{/each}} --}}
+      </div>
+      {{/each}}
+
+
+
+
+
+  </section>
+  <!-- MAKE AN APPOINTMENT -->
+  <section id="appointment" data-stellar-background-ratio="3">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6 col-sm-6">
+          <img src="/picturs/speciality/appointment-image.jpg" class="img-responsive" alt="">
+        </div>
+
+        <div class="col-md-6 col-sm-6">
+          <!-- CONTACT FORM HERE -->
+          <form id="appointment-form" role="form" method="post" action="#">
+
+            <!-- SECTION TITLE -->
+            <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+              <h2>Make an appointment</h2>
+            </div>
+
+            <div class="wow fadeInUp" data-wow-delay="0.8s">
+              <div class="col-md-6 col-sm-6">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Full Name">
+              </div>
+
+              <div class="col-md-6 col-sm-6">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+              </div>
+
+              <div class="col-md-6 col-sm-6">
+                <label for="date">Select Date</label>
+                <input type="date" name="date" value="" class="form-control">
+              </div>
+
+              <div class="col-md-6 col-sm-6">
+                <label for="select">Select Your Dctr</label>
+                <select class="form-control">
+                  <option>General Health</option>
+                  <option>Cardiology</option>
+                  <option>Dental</option>
+                  <option>Medical Research</option>
+                </select>
+              </div>
+
+              <div class="col-md-12 col-sm-12">
+                <label for="telephone">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
+                <label for="Message">Additional Message</label>
+                <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
+                <button type="submit" class="form-control" id="cf-submit" name="submit">Submit Button</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>

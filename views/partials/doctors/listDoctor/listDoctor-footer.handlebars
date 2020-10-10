@@ -1,0 +1,25 @@
+<script src="https://code.jquery.com/jquery-3.5.0.min.js"
+ integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script src="/js/star.js"></script>
+
+<script>
+ $(document).ready(function () {
+
+
+  $(".row2").mouseenter(function () {
+   $(".carousel__prev").fadeIn(500);
+   $(".carousel__next").fadeIn(500);
+
+  });
+  $(".row2").mouseleave(function () {
+   $(".carousel__prev").fadeOut(500);
+   $(".carousel__next").fadeOut(500);
+
+  });
+ });
+</script>
+
+
+</body>
+
+</html>
